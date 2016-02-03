@@ -1,0 +1,24 @@
+//
+//  NSUserDefaults+Extensions.m
+//  Nest Demo
+//
+//  Created by Nikolay Suglobov on 2/3/16.
+//  Copyright © 2016 Appko. All rights reserved.
+//
+
+#import "NSUserDefaults+Extensions.h"
+
+@implementation NSUserDefaults (Extensions)
+
+static NSString *const kAuthorizationTokenKey = @"AuthorizationToken";
+
+- (void)setAuthorizationToken:(NSString *)authorizationToken {
+    [self setValue:authorizationToken forKey:kAuthorizationTokenKey];
+    [self synchronize];
+}
+
+- (NSString *)authorizationToken {
+    return [self stringForKey:kAuthorizationTokenKey];
+}
+
+@end

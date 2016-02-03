@@ -7,15 +7,26 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		16A49E0ADA3517C24B249F78 /* libPods-Nest Demo.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 6E20B68D2D4F5A843C7CBA49 /* libPods-Nest Demo.a */; };
 		9EBC7C9C1C610F2B00FF5616 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 9EBC7C9B1C610F2B00FF5616 /* main.m */; };
 		9EBC7C9F1C610F2B00FF5616 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 9EBC7C9E1C610F2B00FF5616 /* AppDelegate.m */; };
 		9EBC7CA21C610F2B00FF5616 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9EBC7CA11C610F2B00FF5616 /* ViewController.m */; };
 		9EBC7CA51C610F2B00FF5616 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9EBC7CA31C610F2B00FF5616 /* Main.storyboard */; };
 		9EBC7CA71C610F2B00FF5616 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9EBC7CA61C610F2B00FF5616 /* Assets.xcassets */; };
 		9EBC7CAA1C610F2B00FF5616 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9EBC7CA81C610F2B00FF5616 /* LaunchScreen.storyboard */; };
+		9EBC7CB41C622CD900FF5616 /* WebViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9EBC7CB31C622CD900FF5616 /* WebViewController.m */; };
+		9EBC7CB71C622DE400FF5616 /* LoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9EBC7CB61C622DE400FF5616 /* LoginViewController.m */; };
+		9EBC7CBB1C622E3200FF5616 /* AppConfiguration.m in Sources */ = {isa = PBXBuildFile; fileRef = 9EBC7CBA1C622E3200FF5616 /* AppConfiguration.m */; };
+		9EBC7CBE1C622E6B00FF5616 /* AppConstants.m in Sources */ = {isa = PBXBuildFile; fileRef = 9EBC7CBD1C622E6B00FF5616 /* AppConstants.m */; };
+		9EBC7CC21C62321900FF5616 /* AuthWebViewDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 9EBC7CC11C62321900FF5616 /* AuthWebViewDelegate.m */; };
+		9EC6294C1C62439800827A0D /* LoginInteractor.m in Sources */ = {isa = PBXBuildFile; fileRef = 9EC6294B1C62439800827A0D /* LoginInteractor.m */; };
+		9EC629531C62458500827A0D /* NSUserDefaults+Extensions.m in Sources */ = {isa = PBXBuildFile; fileRef = 9EC629521C62458500827A0D /* NSUserDefaults+Extensions.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		6E20B68D2D4F5A843C7CBA49 /* libPods-Nest Demo.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Nest Demo.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		8356D7886E8BA1CF16AFFB53 /* Pods-Nest Demo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Nest Demo.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Nest Demo/Pods-Nest Demo.debug.xcconfig"; sourceTree = "<group>"; };
+		8B648F27BCB23D426BD4F1E4 /* Pods-Nest Demo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Nest Demo.release.xcconfig"; path = "Pods/Target Support Files/Pods-Nest Demo/Pods-Nest Demo.release.xcconfig"; sourceTree = "<group>"; };
 		9EBC7C971C610F2B00FF5616 /* Nest Demo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Nest Demo.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		9EBC7C9B1C610F2B00FF5616 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		9EBC7C9D1C610F2B00FF5616 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -26,6 +37,20 @@
 		9EBC7CA61C610F2B00FF5616 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		9EBC7CA91C610F2B00FF5616 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		9EBC7CAB1C610F2B00FF5616 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		9EBC7CB21C622CD900FF5616 /* WebViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WebViewController.h; sourceTree = "<group>"; };
+		9EBC7CB31C622CD900FF5616 /* WebViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WebViewController.m; sourceTree = "<group>"; };
+		9EBC7CB51C622DE400FF5616 /* LoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoginViewController.h; sourceTree = "<group>"; };
+		9EBC7CB61C622DE400FF5616 /* LoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoginViewController.m; sourceTree = "<group>"; };
+		9EBC7CB91C622E3200FF5616 /* AppConfiguration.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppConfiguration.h; sourceTree = "<group>"; };
+		9EBC7CBA1C622E3200FF5616 /* AppConfiguration.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppConfiguration.m; sourceTree = "<group>"; };
+		9EBC7CBC1C622E6B00FF5616 /* AppConstants.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppConstants.h; sourceTree = "<group>"; };
+		9EBC7CBD1C622E6B00FF5616 /* AppConstants.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppConstants.m; sourceTree = "<group>"; };
+		9EBC7CC01C62321900FF5616 /* AuthWebViewDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AuthWebViewDelegate.h; sourceTree = "<group>"; };
+		9EBC7CC11C62321900FF5616 /* AuthWebViewDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AuthWebViewDelegate.m; sourceTree = "<group>"; };
+		9EC6294A1C62439800827A0D /* LoginInteractor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoginInteractor.h; sourceTree = "<group>"; };
+		9EC6294B1C62439800827A0D /* LoginInteractor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoginInteractor.m; sourceTree = "<group>"; };
+		9EC629511C62458500827A0D /* NSUserDefaults+Extensions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSUserDefaults+Extensions.h"; sourceTree = "<group>"; };
+		9EC629521C62458500827A0D /* NSUserDefaults+Extensions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSUserDefaults+Extensions.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -33,17 +58,37 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				16A49E0ADA3517C24B249F78 /* libPods-Nest Demo.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0AB6A72F37AF708753E2CC08 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				8356D7886E8BA1CF16AFFB53 /* Pods-Nest Demo.debug.xcconfig */,
+				8B648F27BCB23D426BD4F1E4 /* Pods-Nest Demo.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		2DE26B233DD2C763530A81D8 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				6E20B68D2D4F5A843C7CBA49 /* libPods-Nest Demo.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		9EBC7C8E1C610F2B00FF5616 = {
 			isa = PBXGroup;
 			children = (
 				9EBC7C991C610F2B00FF5616 /* Nest Demo */,
 				9EBC7C981C610F2B00FF5616 /* Products */,
+				0AB6A72F37AF708753E2CC08 /* Pods */,
+				2DE26B233DD2C763530A81D8 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -58,6 +103,10 @@
 		9EBC7C991C610F2B00FF5616 /* Nest Demo */ = {
 			isa = PBXGroup;
 			children = (
+				9EC6294D1C62453A00827A0D /* Extensions */,
+				9EBC7CBF1C62320100FF5616 /* Common */,
+				9EBC7CB81C622E2500FF5616 /* AppConfiguration */,
+				9EBC7CB11C622CC800FF5616 /* Screens */,
 				9EBC7C9D1C610F2B00FF5616 /* AppDelegate.h */,
 				9EBC7C9E1C610F2B00FF5616 /* AppDelegate.m */,
 				9EBC7CA01C610F2B00FF5616 /* ViewController.h */,
@@ -79,6 +128,48 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
+		9EBC7CB11C622CC800FF5616 /* Screens */ = {
+			isa = PBXGroup;
+			children = (
+				9EBC7CB21C622CD900FF5616 /* WebViewController.h */,
+				9EBC7CB31C622CD900FF5616 /* WebViewController.m */,
+				9EBC7CB51C622DE400FF5616 /* LoginViewController.h */,
+				9EBC7CB61C622DE400FF5616 /* LoginViewController.m */,
+			);
+			name = Screens;
+			sourceTree = "<group>";
+		};
+		9EBC7CB81C622E2500FF5616 /* AppConfiguration */ = {
+			isa = PBXGroup;
+			children = (
+				9EBC7CB91C622E3200FF5616 /* AppConfiguration.h */,
+				9EBC7CBA1C622E3200FF5616 /* AppConfiguration.m */,
+				9EBC7CBC1C622E6B00FF5616 /* AppConstants.h */,
+				9EBC7CBD1C622E6B00FF5616 /* AppConstants.m */,
+			);
+			name = AppConfiguration;
+			sourceTree = "<group>";
+		};
+		9EBC7CBF1C62320100FF5616 /* Common */ = {
+			isa = PBXGroup;
+			children = (
+				9EBC7CC01C62321900FF5616 /* AuthWebViewDelegate.h */,
+				9EBC7CC11C62321900FF5616 /* AuthWebViewDelegate.m */,
+				9EC6294A1C62439800827A0D /* LoginInteractor.h */,
+				9EC6294B1C62439800827A0D /* LoginInteractor.m */,
+			);
+			name = Common;
+			sourceTree = "<group>";
+		};
+		9EC6294D1C62453A00827A0D /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				9EC629511C62458500827A0D /* NSUserDefaults+Extensions.h */,
+				9EC629521C62458500827A0D /* NSUserDefaults+Extensions.m */,
+			);
+			name = Extensions;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -86,9 +177,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 9EBC7CAE1C610F2B00FF5616 /* Build configuration list for PBXNativeTarget "Nest Demo" */;
 			buildPhases = (
+				7B3F69AC1DAF045F536D74A1 /* Check Pods Manifest.lock */,
 				9EBC7C931C610F2B00FF5616 /* Sources */,
 				9EBC7C941C610F2B00FF5616 /* Frameworks */,
 				9EBC7C951C610F2B00FF5616 /* Resources */,
+				B2DD62FF20EB0C1E23FD3C84 /* Embed Pods Frameworks */,
+				417B2E098D943C9C9301F081 /* Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -144,14 +238,69 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		417B2E098D943C9C9301F081 /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Nest Demo/Pods-Nest Demo-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		7B3F69AC1DAF045F536D74A1 /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		B2DD62FF20EB0C1E23FD3C84 /* Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Nest Demo/Pods-Nest Demo-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		9EBC7C931C610F2B00FF5616 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 				9EBC7CA21C610F2B00FF5616 /* ViewController.m in Sources */,
+				9EC629531C62458500827A0D /* NSUserDefaults+Extensions.m in Sources */,
 				9EBC7C9F1C610F2B00FF5616 /* AppDelegate.m in Sources */,
+				9EBC7CBE1C622E6B00FF5616 /* AppConstants.m in Sources */,
 				9EBC7C9C1C610F2B00FF5616 /* main.m in Sources */,
+				9EBC7CB41C622CD900FF5616 /* WebViewController.m in Sources */,
+				9EBC7CBB1C622E3200FF5616 /* AppConfiguration.m in Sources */,
+				9EC6294C1C62439800827A0D /* LoginInteractor.m in Sources */,
+				9EBC7CC21C62321900FF5616 /* AuthWebViewDelegate.m in Sources */,
+				9EBC7CB71C622DE400FF5616 /* LoginViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -261,6 +410,7 @@
 		};
 		9EBC7CAF1C610F2B00FF5616 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 8356D7886E8BA1CF16AFFB53 /* Pods-Nest Demo.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = "Nest Demo/Info.plist";
@@ -272,6 +422,7 @@
 		};
 		9EBC7CB01C610F2B00FF5616 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 8B648F27BCB23D426BD4F1E4 /* Pods-Nest Demo.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = "Nest Demo/Info.plist";
@@ -300,6 +451,7 @@
 				9EBC7CB01C610F2B00FF5616 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
