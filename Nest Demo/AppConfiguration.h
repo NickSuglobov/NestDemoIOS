@@ -13,6 +13,11 @@
 @property (readonly, strong, nonatomic) NSURL *authURL;
 @property (readonly, strong, nonatomic) NSURL *redirectURL;
 
+@property (readonly, strong, nonatomic) NSString *clientId;
+@property (readonly, strong, nonatomic) NSString *clientSecret;
+@property (readonly, strong, nonatomic) NSString *apiDomain;
+@property (readonly, strong, nonatomic) NSString *state;
+
 + (AppConfiguration *)sharedInstance;
 
 @end

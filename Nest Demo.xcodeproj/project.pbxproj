@@ -21,6 +21,7 @@
 		9EBC7CC21C62321900FF5616 /* AuthWebViewDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 9EBC7CC11C62321900FF5616 /* AuthWebViewDelegate.m */; };
 		9EC6294C1C62439800827A0D /* LoginInteractor.m in Sources */ = {isa = PBXBuildFile; fileRef = 9EC6294B1C62439800827A0D /* LoginInteractor.m */; };
 		9EC629531C62458500827A0D /* NSUserDefaults+Extensions.m in Sources */ = {isa = PBXBuildFile; fileRef = 9EC629521C62458500827A0D /* NSUserDefaults+Extensions.m */; };
+		9EC629561C62516800827A0D /* RequestManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 9EC629551C62516800827A0D /* RequestManager.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -51,6 +52,8 @@
 		9EC6294B1C62439800827A0D /* LoginInteractor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoginInteractor.m; sourceTree = "<group>"; };
 		9EC629511C62458500827A0D /* NSUserDefaults+Extensions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSUserDefaults+Extensions.h"; sourceTree = "<group>"; };
 		9EC629521C62458500827A0D /* NSUserDefaults+Extensions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSUserDefaults+Extensions.m"; sourceTree = "<group>"; };
+		9EC629541C62516800827A0D /* RequestManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RequestManager.h; sourceTree = "<group>"; };
+		9EC629551C62516800827A0D /* RequestManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RequestManager.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -157,6 +160,8 @@
 				9EBC7CC11C62321900FF5616 /* AuthWebViewDelegate.m */,
 				9EC6294A1C62439800827A0D /* LoginInteractor.h */,
 				9EC6294B1C62439800827A0D /* LoginInteractor.m */,
+				9EC629541C62516800827A0D /* RequestManager.h */,
+				9EC629551C62516800827A0D /* RequestManager.m */,
 			);
 			name = Common;
 			sourceTree = "<group>";
@@ -298,6 +303,7 @@
 				9EBC7C9C1C610F2B00FF5616 /* main.m in Sources */,
 				9EBC7CB41C622CD900FF5616 /* WebViewController.m in Sources */,
 				9EBC7CBB1C622E3200FF5616 /* AppConfiguration.m in Sources */,
+				9EC629561C62516800827A0D /* RequestManager.m in Sources */,
 				9EC6294C1C62439800827A0D /* LoginInteractor.m in Sources */,
 				9EBC7CC21C62321900FF5616 /* AuthWebViewDelegate.m in Sources */,
 				9EBC7CB71C622DE400FF5616 /* LoginViewController.m in Sources */,

@@ -17,8 +17,12 @@ static AppConfiguration *_instance;
 {
     self = [super init];
     if (self) {
-        _authURL = [self authorizationURL];
         _redirectURL = [NSURL URLWithString:kRedirectURL];
+        _apiDomain = kNestCurrentAPIDomain;
+        _clientId = kNestClientID;
+        _clientSecret = kNestClientSecret;
+        _state = kNestState;
+        _authURL = [self authorizationURL];
     }
     return self;
 }
@@ -32,7 +36,7 @@ static AppConfiguration *_instance;
 }
 
 - (NSURL *)authorizationURL {
-    NSString *authorizationPath = [NSString stringWithFormat:@"https://%@/login/oauth2?client_id=%@&state=%@", kNestCurrentAPIDomain, kNestClientID, kNestState];
+    NSString *authorizationPath = [NSString stringWithFormat:@"https://%@/login/oauth2?client_id=%@&state=%@", _apiDomain, _clientId, _state];
     return [NSURL URLWithString:authorizationPath];
 }
 
