@@ -16,6 +16,12 @@
 
 @import Foundation;
 
+typedef enum {
+    ThermostatStateOff,
+    ThermostatStateHeating,
+    ThermostatStateCooling
+} ThermostatState;
+
 @interface Thermostat : NSObject
 
 @property (nonatomic, strong) NSString *thermostatId;
@@ -24,5 +30,9 @@
 @property (nonatomic) BOOL fanTimerActive;
 @property (nonatomic) NSInteger ambientTemperatureF;
 @property (nonatomic) NSInteger targetTemperatureF;
+@property (nonatomic) NSInteger humidity;
+@property (nonatomic, strong) NSString *hvacState;
+@property (nonatomic, readonly) ThermostatState state;
+@property (nonatomic) BOOL hasLeaf;
 
 @end

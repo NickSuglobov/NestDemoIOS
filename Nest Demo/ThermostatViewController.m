@@ -9,43 +9,37 @@
 #import "ThermostatViewController.h"
 #import "NestThermostatManager.h"
 #import "Thermostat.h"
+#import "Rotor.h"
+#import "UIColor+Extensions.h"
 
 @interface ThermostatViewController() <NestThermostatManagerDelegate>
 
 @property (nonatomic, strong) NestThermostatManager *thermostatManager;
 @property (weak, nonatomic) IBOutlet UILabel *ambientTemperatureLabel;
+@property (weak, nonatomic) IBOutlet UIProgressView *ambientTemperatureMeter;
 @property (weak, nonatomic) IBOutlet UILabel *targetTemperatureLabel;
 @property (weak, nonatomic) IBOutlet UISlider *temperatureSlider;
 @property (weak, nonatomic) IBOutlet UIImageView *coolerView;
 @property (weak, nonatomic) IBOutlet UIImageView *leafView;
+@property (strong, nonatomic) IBOutlet Rotor *rotor;
+@property (weak, nonatomic) IBOutlet UIProgressView *humidityMeter;
+@property (weak, nonatomic) IBOutlet UILabel *humidityLabel;
 
 @end
 
 @implementation ThermostatViewController
+
+static CGFloat const CurrentTemperatureMin = -4;
+static CGFloat const CurrentTemperatureMax = 140;
 
 - (void)viewDidLoad {
     [super viewDidLoad];
     [self updateUIWithThermostat:self.thermostat];
 }
 
-- (void)viewDidAppear:(BOOL)animated
-{
-    [super viewDidAppear:animated];
-
+- (void)viewWillAppear:(BOOL)animated {
+    [super viewWillAppear:animated];
     self.coolerView.layer.anchorPoint = CGPointMake(0.44, 0.50);
-    [self animate];
-}
-
-- (void)animate {
-    [UIView animateWithDuration:.25 delay:0.0 options: UIViewAnimationOptionCurveLinear animations:^{
-        self.coolerView.transform = CGAffineTransformMakeRotation(M_PI);
-    } completion:^(BOOL finished) {
-        [UIView animateWithDuration:.25 delay:0.0 options: UIViewAnimationOptionCurveLinear animations:^{
-            self.coolerView.transform = CGAffineTransformMakeRotation(0);
-        } completion:^(BOOL finished) {
-            [self animate];
-        }];
-    }];
 }
 
 - (NestThermostatManager *)thermostatManager {
@@ -74,9 +68,31 @@
 
 - (void)updateUIWithThermostat:(Thermostat *)thermostat {
     self.temperatureSlider.value = thermostat.targetTemperatureF;
-    self.targetTemperatureLabel.text = [NSString stringWithFormat:@"%ld", (long)thermostat.targetTemperatureF];
-    self.ambientTemperatureLabel.text = [NSString stringWithFormat:@"%ld", (long)thermostat.ambientTemperatureF];
+    self.targetTemperatureLabel.text = [NSString stringWithFormat:@"%ldº", (long)thermostat.targetTemperatureF];
+    self.ambientTemperatureLabel.text = [NSString stringWithFormat:@"%ldº", (long)thermostat.ambientTemperatureF];
+    self.humidityLabel.text = [NSString stringWithFormat:@"%ld %%", (long)thermostat.humidity];
+    self.humidityMeter.progress = thermostat.humidity / 100.0;
+    self.ambientTemperatureMeter.progress = (thermostat.ambientTemperatureF - CurrentTemperatureMin) / (CurrentTemperatureMax - CurrentTemperatureMin);
+    
     self.title = thermostat.nameLong;
+    
+    self.leafView.tintColor = thermostat.hasLeaf ? [UIColor leafColor] : [UIColor lightGrayColor];
+    switch (thermostat.state) {
+        case ThermostatStateOff:
+            [self.rotor stopAnimating];
+            self.coolerView.tintColor = [UIColor lightGrayColor];
+            break;
+            
+        case ThermostatStateHeating:
+            [self.rotor startAnimating];
+            self.coolerView.tintColor = [UIColor hotColor];
+            break;
+            
+        case ThermostatStateCooling:
+            [self.rotor startAnimating];
+            self.coolerView.tintColor = [UIColor coldColor];
+            break;
+    }
 }
 
 

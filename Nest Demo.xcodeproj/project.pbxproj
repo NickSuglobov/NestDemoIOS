@@ -10,6 +10,8 @@
 		16A49E0ADA3517C24B249F78 /* libPods-Nest Demo.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 6E20B68D2D4F5A843C7CBA49 /* libPods-Nest Demo.a */; };
 		9EB583131C64B53400F6D79A /* UIView+Extensions.m in Sources */ = {isa = PBXBuildFile; fileRef = 9EB583121C64B53400F6D79A /* UIView+Extensions.m */; };
 		9EB583191C64BF0C00F6D79A /* TintImageView.m in Sources */ = {isa = PBXBuildFile; fileRef = 9EB583181C64BF0C00F6D79A /* TintImageView.m */; };
+		9EB5831D1C64D07F00F6D79A /* Rotor.m in Sources */ = {isa = PBXBuildFile; fileRef = 9EB5831C1C64D07F00F6D79A /* Rotor.m */; };
+		9EB583201C64D4DB00F6D79A /* UIColor+Extensions.m in Sources */ = {isa = PBXBuildFile; fileRef = 9EB5831F1C64D4DB00F6D79A /* UIColor+Extensions.m */; };
 		9EBC7C9C1C610F2B00FF5616 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 9EBC7C9B1C610F2B00FF5616 /* main.m */; };
 		9EBC7C9F1C610F2B00FF5616 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 9EBC7C9E1C610F2B00FF5616 /* AppDelegate.m */; };
 		9EBC7CA21C610F2B00FF5616 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9EBC7CA11C610F2B00FF5616 /* ViewController.m */; };
@@ -41,6 +43,10 @@
 		9EB583121C64B53400F6D79A /* UIView+Extensions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+Extensions.m"; sourceTree = "<group>"; };
 		9EB583171C64BF0C00F6D79A /* TintImageView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TintImageView.h; sourceTree = "<group>"; };
 		9EB583181C64BF0C00F6D79A /* TintImageView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TintImageView.m; sourceTree = "<group>"; };
+		9EB5831B1C64D07F00F6D79A /* Rotor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Rotor.h; sourceTree = "<group>"; };
+		9EB5831C1C64D07F00F6D79A /* Rotor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Rotor.m; sourceTree = "<group>"; };
+		9EB5831E1C64D4DB00F6D79A /* UIColor+Extensions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIColor+Extensions.h"; sourceTree = "<group>"; };
+		9EB5831F1C64D4DB00F6D79A /* UIColor+Extensions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIColor+Extensions.m"; sourceTree = "<group>"; };
 		9EBC7C971C610F2B00FF5616 /* Nest Demo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Nest Demo.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		9EBC7C9B1C610F2B00FF5616 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		9EBC7C9D1C610F2B00FF5616 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -117,6 +123,8 @@
 			children = (
 				9EB583171C64BF0C00F6D79A /* TintImageView.h */,
 				9EB583181C64BF0C00F6D79A /* TintImageView.m */,
+				9EB5831B1C64D07F00F6D79A /* Rotor.h */,
+				9EB5831C1C64D07F00F6D79A /* Rotor.m */,
 			);
 			name = Controls;
 			sourceTree = "<group>";
@@ -232,6 +240,8 @@
 				9EC629521C62458500827A0D /* NSUserDefaults+Extensions.m */,
 				9EB583111C64B53400F6D79A /* UIView+Extensions.h */,
 				9EB583121C64B53400F6D79A /* UIView+Extensions.m */,
+				9EB5831E1C64D4DB00F6D79A /* UIColor+Extensions.h */,
+				9EB5831F1C64D4DB00F6D79A /* UIColor+Extensions.m */,
 			);
 			name = Extensions;
 			sourceTree = "<group>";
@@ -360,6 +370,7 @@
 				9EBC7EDC1C6366BB00866361 /* FirebaseManager.m in Sources */,
 				9EBC7CA21C610F2B00FF5616 /* ViewController.m in Sources */,
 				9EC629531C62458500827A0D /* NSUserDefaults+Extensions.m in Sources */,
+				9EB5831D1C64D07F00F6D79A /* Rotor.m in Sources */,
 				9EBC7C9F1C610F2B00FF5616 /* AppDelegate.m in Sources */,
 				9EBC7CBE1C622E6B00FF5616 /* AppConstants.m in Sources */,
 				9EBC7EDD1C6366BB00866361 /* NestThermostatManager.m in Sources */,
@@ -373,6 +384,7 @@
 				9EBC7CB71C622DE400FF5616 /* LoginViewController.m in Sources */,
 				9EBC7EE11C63681500866361 /* Thermostat.m in Sources */,
 				9EBC7EEA1C63831500866361 /* ThermostatListDataSource.m in Sources */,
+				9EB583201C64D4DB00F6D79A /* UIColor+Extensions.m in Sources */,
 				9EBC7EE41C636A0E00866361 /* ThermostatViewController.m in Sources */,
 				9EBC7EE71C63826600866361 /* ThermostatListController.m in Sources */,
 				9EB583131C64B53400F6D79A /* UIView+Extensions.m in Sources */,

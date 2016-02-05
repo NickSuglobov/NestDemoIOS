@@ -18,4 +18,17 @@
 
 @implementation Thermostat
 
+- (ThermostatState)state {
+    if ([self.hvacState isEqualToString:@"heating"]) {
+        return ThermostatStateHeating;
+    }
+    else if ([self.hvacState isEqualToString:@"cooling"]) {
+        return ThermostatStateCooling;
+    }
+    else if ([self.hvacState isEqualToString:@"off"]) {
+        return ThermostatStateOff;
+    }
+    return ThermostatStateOff;
+}
+
 @end

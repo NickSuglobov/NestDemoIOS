@@ -23,10 +23,14 @@
 
 #define FAN_TIMER_ACTIVE @"fan_timer_active"
 #define HAS_FAN @"has_fan"
+#define HAS_LEAF @"has_leaf"
+#define HVAC_STATE @"hvac_state"
 #define TARGET_TEMPERATURE_F @"target_temperature_f"
 #define AMBIENT_TEMPERATURE_F @"ambient_temperature_f"
+#define HUMIDITY @"humidity"
 #define NAME_LONG @"name_long"
 #define THERMOSTAT_PATH @"devices/thermostats"
+
 
 @implementation NestThermostatManager
 
@@ -64,9 +68,17 @@
     if ([structure objectForKey:TARGET_TEMPERATURE_F]) {
         thermostat.targetTemperatureF = [[structure objectForKey:TARGET_TEMPERATURE_F] integerValue];
     }
+    if ([structure objectForKey:HUMIDITY]) {
+        thermostat.humidity = [[structure objectForKey:HUMIDITY] integerValue];
+    }
     if ([structure objectForKey:HAS_FAN]) {
         thermostat.hasFan = [[structure objectForKey:HAS_FAN] boolValue];
-
+    }
+    if ([structure objectForKey:HAS_LEAF]) {
+        thermostat.hasLeaf = [[structure objectForKey:HAS_LEAF] boolValue];
+    }
+    if ([structure objectForKey:HVAC_STATE]) {
+        thermostat.hvacState = [structure objectForKey:HVAC_STATE];
     }
     if ([structure objectForKey:FAN_TIMER_ACTIVE]) {
         thermostat.fanTimerActive = [[structure objectForKey:FAN_TIMER_ACTIVE] boolValue];
