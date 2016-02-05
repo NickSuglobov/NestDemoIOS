@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		16A49E0ADA3517C24B249F78 /* libPods-Nest Demo.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 6E20B68D2D4F5A843C7CBA49 /* libPods-Nest Demo.a */; };
+		9EB583131C64B53400F6D79A /* UIView+Extensions.m in Sources */ = {isa = PBXBuildFile; fileRef = 9EB583121C64B53400F6D79A /* UIView+Extensions.m */; };
+		9EB583191C64BF0C00F6D79A /* TintImageView.m in Sources */ = {isa = PBXBuildFile; fileRef = 9EB583181C64BF0C00F6D79A /* TintImageView.m */; };
 		9EBC7C9C1C610F2B00FF5616 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 9EBC7C9B1C610F2B00FF5616 /* main.m */; };
 		9EBC7C9F1C610F2B00FF5616 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 9EBC7C9E1C610F2B00FF5616 /* AppDelegate.m */; };
 		9EBC7CA21C610F2B00FF5616 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9EBC7CA11C610F2B00FF5616 /* ViewController.m */; };
@@ -19,6 +21,13 @@
 		9EBC7CBB1C622E3200FF5616 /* AppConfiguration.m in Sources */ = {isa = PBXBuildFile; fileRef = 9EBC7CBA1C622E3200FF5616 /* AppConfiguration.m */; };
 		9EBC7CBE1C622E6B00FF5616 /* AppConstants.m in Sources */ = {isa = PBXBuildFile; fileRef = 9EBC7CBD1C622E6B00FF5616 /* AppConstants.m */; };
 		9EBC7CC21C62321900FF5616 /* AuthWebViewDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 9EBC7CC11C62321900FF5616 /* AuthWebViewDelegate.m */; };
+		9EBC7EDC1C6366BB00866361 /* FirebaseManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 9EBC7ED71C6366BB00866361 /* FirebaseManager.m */; };
+		9EBC7EDD1C6366BB00866361 /* NestThermostatManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 9EBC7ED91C6366BB00866361 /* NestThermostatManager.m */; };
+		9EBC7EDE1C6366BB00866361 /* NestStructureManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 9EBC7EDB1C6366BB00866361 /* NestStructureManager.m */; };
+		9EBC7EE11C63681500866361 /* Thermostat.m in Sources */ = {isa = PBXBuildFile; fileRef = 9EBC7EE01C63681500866361 /* Thermostat.m */; };
+		9EBC7EE41C636A0E00866361 /* ThermostatViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9EBC7EE31C636A0E00866361 /* ThermostatViewController.m */; };
+		9EBC7EE71C63826600866361 /* ThermostatListController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9EBC7EE61C63826600866361 /* ThermostatListController.m */; };
+		9EBC7EEA1C63831500866361 /* ThermostatListDataSource.m in Sources */ = {isa = PBXBuildFile; fileRef = 9EBC7EE91C63831500866361 /* ThermostatListDataSource.m */; };
 		9EC6294C1C62439800827A0D /* LoginInteractor.m in Sources */ = {isa = PBXBuildFile; fileRef = 9EC6294B1C62439800827A0D /* LoginInteractor.m */; };
 		9EC629531C62458500827A0D /* NSUserDefaults+Extensions.m in Sources */ = {isa = PBXBuildFile; fileRef = 9EC629521C62458500827A0D /* NSUserDefaults+Extensions.m */; };
 		9EC629561C62516800827A0D /* RequestManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 9EC629551C62516800827A0D /* RequestManager.m */; };
@@ -28,6 +37,10 @@
 		6E20B68D2D4F5A843C7CBA49 /* libPods-Nest Demo.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Nest Demo.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		8356D7886E8BA1CF16AFFB53 /* Pods-Nest Demo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Nest Demo.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Nest Demo/Pods-Nest Demo.debug.xcconfig"; sourceTree = "<group>"; };
 		8B648F27BCB23D426BD4F1E4 /* Pods-Nest Demo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Nest Demo.release.xcconfig"; path = "Pods/Target Support Files/Pods-Nest Demo/Pods-Nest Demo.release.xcconfig"; sourceTree = "<group>"; };
+		9EB583111C64B53400F6D79A /* UIView+Extensions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+Extensions.h"; sourceTree = "<group>"; };
+		9EB583121C64B53400F6D79A /* UIView+Extensions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+Extensions.m"; sourceTree = "<group>"; };
+		9EB583171C64BF0C00F6D79A /* TintImageView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TintImageView.h; sourceTree = "<group>"; };
+		9EB583181C64BF0C00F6D79A /* TintImageView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TintImageView.m; sourceTree = "<group>"; };
 		9EBC7C971C610F2B00FF5616 /* Nest Demo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Nest Demo.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		9EBC7C9B1C610F2B00FF5616 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		9EBC7C9D1C610F2B00FF5616 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -48,6 +61,20 @@
 		9EBC7CBD1C622E6B00FF5616 /* AppConstants.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppConstants.m; sourceTree = "<group>"; };
 		9EBC7CC01C62321900FF5616 /* AuthWebViewDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AuthWebViewDelegate.h; sourceTree = "<group>"; };
 		9EBC7CC11C62321900FF5616 /* AuthWebViewDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AuthWebViewDelegate.m; sourceTree = "<group>"; };
+		9EBC7ED61C6366BB00866361 /* FirebaseManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FirebaseManager.h; sourceTree = "<group>"; };
+		9EBC7ED71C6366BB00866361 /* FirebaseManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FirebaseManager.m; sourceTree = "<group>"; };
+		9EBC7ED81C6366BB00866361 /* NestThermostatManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NestThermostatManager.h; sourceTree = "<group>"; };
+		9EBC7ED91C6366BB00866361 /* NestThermostatManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NestThermostatManager.m; sourceTree = "<group>"; };
+		9EBC7EDA1C6366BB00866361 /* NestStructureManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NestStructureManager.h; sourceTree = "<group>"; };
+		9EBC7EDB1C6366BB00866361 /* NestStructureManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NestStructureManager.m; sourceTree = "<group>"; };
+		9EBC7EDF1C63681500866361 /* Thermostat.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Thermostat.h; sourceTree = "<group>"; };
+		9EBC7EE01C63681500866361 /* Thermostat.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Thermostat.m; sourceTree = "<group>"; };
+		9EBC7EE21C636A0E00866361 /* ThermostatViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ThermostatViewController.h; sourceTree = "<group>"; };
+		9EBC7EE31C636A0E00866361 /* ThermostatViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ThermostatViewController.m; sourceTree = "<group>"; };
+		9EBC7EE51C63826500866361 /* ThermostatListController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ThermostatListController.h; sourceTree = "<group>"; };
+		9EBC7EE61C63826600866361 /* ThermostatListController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ThermostatListController.m; sourceTree = "<group>"; };
+		9EBC7EE81C63831500866361 /* ThermostatListDataSource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ThermostatListDataSource.h; sourceTree = "<group>"; };
+		9EBC7EE91C63831500866361 /* ThermostatListDataSource.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ThermostatListDataSource.m; sourceTree = "<group>"; };
 		9EC6294A1C62439800827A0D /* LoginInteractor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoginInteractor.h; sourceTree = "<group>"; };
 		9EC6294B1C62439800827A0D /* LoginInteractor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoginInteractor.m; sourceTree = "<group>"; };
 		9EC629511C62458500827A0D /* NSUserDefaults+Extensions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSUserDefaults+Extensions.h"; sourceTree = "<group>"; };
@@ -85,6 +112,15 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		9EB5831A1C64D04500F6D79A /* Controls */ = {
+			isa = PBXGroup;
+			children = (
+				9EB583171C64BF0C00F6D79A /* TintImageView.h */,
+				9EB583181C64BF0C00F6D79A /* TintImageView.m */,
+			);
+			name = Controls;
+			sourceTree = "<group>";
+		};
 		9EBC7C8E1C610F2B00FF5616 = {
 			isa = PBXGroup;
 			children = (
@@ -106,7 +142,9 @@
 		9EBC7C991C610F2B00FF5616 /* Nest Demo */ = {
 			isa = PBXGroup;
 			children = (
+				9EBC7ED51C6366AA00866361 /* Nest Api */,
 				9EC6294D1C62453A00827A0D /* Extensions */,
+				9EB5831A1C64D04500F6D79A /* Controls */,
 				9EBC7CBF1C62320100FF5616 /* Common */,
 				9EBC7CB81C622E2500FF5616 /* AppConfiguration */,
 				9EBC7CB11C622CC800FF5616 /* Screens */,
@@ -138,6 +176,12 @@
 				9EBC7CB31C622CD900FF5616 /* WebViewController.m */,
 				9EBC7CB51C622DE400FF5616 /* LoginViewController.h */,
 				9EBC7CB61C622DE400FF5616 /* LoginViewController.m */,
+				9EBC7EE21C636A0E00866361 /* ThermostatViewController.h */,
+				9EBC7EE31C636A0E00866361 /* ThermostatViewController.m */,
+				9EBC7EE51C63826500866361 /* ThermostatListController.h */,
+				9EBC7EE61C63826600866361 /* ThermostatListController.m */,
+				9EBC7EE81C63831500866361 /* ThermostatListDataSource.h */,
+				9EBC7EE91C63831500866361 /* ThermostatListDataSource.m */,
 			);
 			name = Screens;
 			sourceTree = "<group>";
@@ -166,11 +210,28 @@
 			name = Common;
 			sourceTree = "<group>";
 		};
+		9EBC7ED51C6366AA00866361 /* Nest Api */ = {
+			isa = PBXGroup;
+			children = (
+				9EBC7ED61C6366BB00866361 /* FirebaseManager.h */,
+				9EBC7ED71C6366BB00866361 /* FirebaseManager.m */,
+				9EBC7ED81C6366BB00866361 /* NestThermostatManager.h */,
+				9EBC7ED91C6366BB00866361 /* NestThermostatManager.m */,
+				9EBC7EDA1C6366BB00866361 /* NestStructureManager.h */,
+				9EBC7EDB1C6366BB00866361 /* NestStructureManager.m */,
+				9EBC7EDF1C63681500866361 /* Thermostat.h */,
+				9EBC7EE01C63681500866361 /* Thermostat.m */,
+			);
+			name = "Nest Api";
+			sourceTree = "<group>";
+		};
 		9EC6294D1C62453A00827A0D /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
 				9EC629511C62458500827A0D /* NSUserDefaults+Extensions.h */,
 				9EC629521C62458500827A0D /* NSUserDefaults+Extensions.m */,
+				9EB583111C64B53400F6D79A /* UIView+Extensions.h */,
+				9EB583121C64B53400F6D79A /* UIView+Extensions.m */,
 			);
 			name = Extensions;
 			sourceTree = "<group>";
@@ -296,17 +357,26 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9EBC7EDC1C6366BB00866361 /* FirebaseManager.m in Sources */,
 				9EBC7CA21C610F2B00FF5616 /* ViewController.m in Sources */,
 				9EC629531C62458500827A0D /* NSUserDefaults+Extensions.m in Sources */,
 				9EBC7C9F1C610F2B00FF5616 /* AppDelegate.m in Sources */,
 				9EBC7CBE1C622E6B00FF5616 /* AppConstants.m in Sources */,
+				9EBC7EDD1C6366BB00866361 /* NestThermostatManager.m in Sources */,
 				9EBC7C9C1C610F2B00FF5616 /* main.m in Sources */,
+				9EBC7EDE1C6366BB00866361 /* NestStructureManager.m in Sources */,
 				9EBC7CB41C622CD900FF5616 /* WebViewController.m in Sources */,
 				9EBC7CBB1C622E3200FF5616 /* AppConfiguration.m in Sources */,
 				9EC629561C62516800827A0D /* RequestManager.m in Sources */,
 				9EC6294C1C62439800827A0D /* LoginInteractor.m in Sources */,
 				9EBC7CC21C62321900FF5616 /* AuthWebViewDelegate.m in Sources */,
 				9EBC7CB71C622DE400FF5616 /* LoginViewController.m in Sources */,
+				9EBC7EE11C63681500866361 /* Thermostat.m in Sources */,
+				9EBC7EEA1C63831500866361 /* ThermostatListDataSource.m in Sources */,
+				9EBC7EE41C636A0E00866361 /* ThermostatViewController.m in Sources */,
+				9EBC7EE71C63826600866361 /* ThermostatListController.m in Sources */,
+				9EB583131C64B53400F6D79A /* UIView+Extensions.m in Sources */,
+				9EB583191C64BF0C00F6D79A /* TintImageView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

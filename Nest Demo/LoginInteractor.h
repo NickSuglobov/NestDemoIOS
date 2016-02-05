@@ -9,6 +9,7 @@
 #import <Foundation/Foundation.h>
 #import <UIKit/UIKit.h>
 
+
 @interface LoginInteractor : NSObject
 
 - (void)handleLoginWithRedirectURL:(NSURL *)url viewController:(UIViewController *)viewController;

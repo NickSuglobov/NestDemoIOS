@@ -1,8 +1,9 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9531" systemVersion="15C50" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9531" systemVersion="15C50" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="vpS-qh-dIG">
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9529"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
         <!--Login View Controller-->
@@ -24,13 +25,19 @@
                                     <outlet property="delegate" destination="5N8-fs-N7s" id="0ah-vh-GiE"/>
                                 </connections>
                             </webView>
+                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" animating="YES" style="whiteLarge" translatesAutoresizingMaskIntoConstraints="NO" id="h6R-Ou-H9S">
+                                <rect key="frame" x="169" y="315" width="37" height="37"/>
+                                <color key="color" red="0.0" green="0.60133405709999999" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                            </activityIndicatorView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstAttribute="trailing" secondItem="qfW-gW-OAn" secondAttribute="trailing" id="BsU-uV-EwE"/>
+                            <constraint firstItem="h6R-Ou-H9S" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Elp-61-gYs"/>
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="qfW-gW-OAn" secondAttribute="bottom" id="Jp4-iR-Kyn"/>
                             <constraint firstItem="qfW-gW-OAn" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="Wma-vz-j5Q"/>
                             <constraint firstItem="qfW-gW-OAn" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="glK-Ee-lQZ"/>
+                            <constraint firstItem="h6R-Ou-H9S" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="xB9-eX-VBG"/>
                         </constraints>
                     </view>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
@@ -40,9 +47,249 @@
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
-                <customObject id="5N8-fs-N7s" customClass="AuthWebViewDelegate"/>
+                <customObject id="5N8-fs-N7s" customClass="AuthWebViewDelegate">
+                    <connections>
+                        <outlet property="activity" destination="h6R-Ou-H9S" id="IE0-Ad-xDl"/>
+                    </connections>
+                </customObject>
             </objects>
             <point key="canvasLocation" x="304.5" y="404.5"/>
         </scene>
+        <!--Thermostat List Controller-->
+        <scene sceneID="fax-E8-RGw">
+            <objects>
+                <viewController id="4pj-CN-BqP" customClass="ThermostatListController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Czl-MG-Zf3"/>
+                        <viewControllerLayoutGuide type="bottom" id="DB9-gt-Amw"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="mCa-Ns-fsZ">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="grouped" separatorStyle="default" rowHeight="44" sectionHeaderHeight="18" sectionFooterHeight="18" translatesAutoresizingMaskIntoConstraints="NO" id="2wv-DL-MEl">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                <color key="backgroundColor" red="0.90588235289999997" green="0.94509803920000002" blue="0.94509803920000002" alpha="1" colorSpace="calibratedRGB"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="ThermostatCell" textLabel="SRM-iy-Owq" style="IBUITableViewCellStyleDefault" id="PEd-Nk-hya">
+                                        <rect key="frame" x="0.0" y="114" width="375" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="PEd-Nk-hya" id="Mcf-wr-ypy">
+                                            <rect key="frame" x="0.0" y="0.0" width="342" height="43"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="SRM-iy-Owq">
+                                                    <rect key="frame" x="15" y="0.0" width="325" height="43"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                                    <color key="textColor" white="0.36152844550000002" alpha="1" colorSpace="calibratedWhite"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <segue destination="W25-dF-euE" kind="show" identifier="OpenThermostat" id="rF1-ht-5DA"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="9Vt-5L-r3E" id="vKI-eo-Of0"/>
+                                    <outlet property="delegate" destination="9Vt-5L-r3E" id="8Xf-tB-Qo2"/>
+                                </connections>
+                            </tableView>
+                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" animating="YES" style="whiteLarge" translatesAutoresizingMaskIntoConstraints="NO" id="vX4-7m-vva">
+                                <rect key="frame" x="169" y="315" width="37" height="37"/>
+                                <color key="color" red="0.0" green="0.47843137254901963" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                            </activityIndicatorView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="DB9-gt-Amw" firstAttribute="top" secondItem="2wv-DL-MEl" secondAttribute="bottom" id="Mqw-hZ-Lde"/>
+                            <constraint firstItem="2wv-DL-MEl" firstAttribute="leading" secondItem="mCa-Ns-fsZ" secondAttribute="leading" id="ami-B7-kqU"/>
+                            <constraint firstItem="vX4-7m-vva" firstAttribute="centerX" secondItem="mCa-Ns-fsZ" secondAttribute="centerX" id="gn8-p4-Ic0"/>
+                            <constraint firstItem="vX4-7m-vva" firstAttribute="centerY" secondItem="mCa-Ns-fsZ" secondAttribute="centerY" id="guF-kt-0hm"/>
+                            <constraint firstItem="2wv-DL-MEl" firstAttribute="top" secondItem="mCa-Ns-fsZ" secondAttribute="top" id="m8g-bY-VKO"/>
+                            <constraint firstAttribute="trailing" secondItem="2wv-DL-MEl" secondAttribute="trailing" id="up9-Ad-PL3"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="L6D-eb-byp">
+                        <barButtonItem key="backBarButtonItem" title=" " id="isU-bZ-UCa"/>
+                    </navigationItem>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
+                    <connections>
+                        <outlet property="activity" destination="vX4-7m-vva" id="lTz-uQ-CfF"/>
+                        <outlet property="dataSource" destination="9Vt-5L-r3E" id="rB0-JA-yzv"/>
+                        <outlet property="tableView" destination="2wv-DL-MEl" id="csS-Lx-6kN"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Kne-dn-REk" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <customObject id="9Vt-5L-r3E" customClass="ThermostatListDataSource"/>
+            </objects>
+            <point key="canvasLocation" x="635.5" y="-410.5"/>
+        </scene>
+        <!--Thermostat View Controller-->
+        <scene sceneID="sql-g3-lRB">
+            <objects>
+                <viewController id="W25-dF-euE" customClass="ThermostatViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="JEr-3a-GWk"/>
+                        <viewControllerLayoutGuide type="bottom" id="LVN-4f-ge4"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="rk4-GU-soh">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Crf-o6-88V">
+                                <rect key="frame" x="16" y="100" width="343" height="234"/>
+                                <subviews>
+                                    <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="57" minValue="48" maxValue="90" continuous="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nPO-7P-SVW">
+                                        <rect key="frame" x="22" y="42" width="299" height="31"/>
+                                        <connections>
+                                            <action selector="updateTemperature:" destination="W25-dF-euE" eventType="valueChanged" id="HM9-k6-LgE"/>
+                                        </connections>
+                                    </slider>
+                                    <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" progress="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="UeR-7r-ccU">
+                                        <rect key="frame" x="24" y="118" width="295" height="2"/>
+                                    </progressView>
+                                    <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" progress="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="r1P-qD-AkM">
+                                        <rect key="frame" x="24" y="170" width="295" height="2"/>
+                                    </progressView>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tuL-mH-TBk">
+                                        <rect key="frame" x="308" y="19" width="11" height="21"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <color key="textColor" white="0.36152844550000002" alpha="1" colorSpace="calibratedWhite"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Your thermostat is set to:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="g3J-91-9vc">
+                                        <rect key="frame" x="24" y="21" width="173" height="18"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                        <color key="textColor" white="0.36152844550000002" alpha="1" colorSpace="calibratedWhite"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Current Temperature" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oT4-LX-78L">
+                                        <rect key="frame" x="24" y="93" width="144" height="18"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                        <color key="textColor" white="0.36152844550000002" alpha="1" colorSpace="calibratedWhite"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Humidity" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ric-JG-sj3">
+                                        <rect key="frame" x="24" y="141" width="62" height="18"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                        <color key="textColor" white="0.36152844550000002" alpha="1" colorSpace="calibratedWhite"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="86 %" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ytb-48-gOI">
+                                        <rect key="frame" x="280" y="139" width="39" height="21"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <color key="textColor" white="0.36152844550000002" alpha="1" colorSpace="calibratedWhite"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="70" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="01E-qU-7kR">
+                                        <rect key="frame" x="299" y="89" width="20" height="21"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <color key="textColor" white="0.36152844550000002" alpha="1" colorSpace="calibratedWhite"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Leaf" translatesAutoresizingMaskIntoConstraints="NO" id="MMG-qE-YDK" customClass="TintImageView">
+                                        <rect key="frame" x="128" y="190" width="28" height="24"/>
+                                        <color key="tintColor" red="0.18703226498217698" green="0.81622488839285712" blue="0.32525546208400091" alpha="1" colorSpace="calibratedRGB"/>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="boolean" keyPath="useTintColor" value="YES"/>
+                                        </userDefinedRuntimeAttributes>
+                                    </imageView>
+                                    <imageView userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Fan" translatesAutoresizingMaskIntoConstraints="NO" id="ytL-Xj-JrB" customClass="TintImageView">
+                                        <rect key="frame" x="186" y="188" width="27" height="28"/>
+                                        <color key="tintColor" red="0.11614682379423379" green="0.68774502214526434" blue="0.87022879464285718" alpha="1" colorSpace="calibratedRGB"/>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="boolean" keyPath="useTintColor" value="YES"/>
+                                        </userDefinedRuntimeAttributes>
+                                    </imageView>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstItem="Ric-JG-sj3" firstAttribute="leading" secondItem="r1P-qD-AkM" secondAttribute="leading" id="2MH-7y-v8i"/>
+                                    <constraint firstItem="UeR-7r-ccU" firstAttribute="trailing" secondItem="nPO-7P-SVW" secondAttribute="trailing" id="2qB-9Y-H7I"/>
+                                    <constraint firstItem="nPO-7P-SVW" firstAttribute="top" secondItem="Crf-o6-88V" secondAttribute="top" constant="42" id="4N9-x4-wZh"/>
+                                    <constraint firstAttribute="trailing" secondItem="nPO-7P-SVW" secondAttribute="trailing" constant="24" id="4SF-Iz-6wO"/>
+                                    <constraint firstItem="ytb-48-gOI" firstAttribute="trailing" secondItem="r1P-qD-AkM" secondAttribute="trailing" id="4pi-qn-bcJ"/>
+                                    <constraint firstItem="r1P-qD-AkM" firstAttribute="top" secondItem="ytb-48-gOI" secondAttribute="bottom" constant="10" id="9Fq-Ac-4PQ"/>
+                                    <constraint firstItem="UeR-7r-ccU" firstAttribute="top" secondItem="nPO-7P-SVW" secondAttribute="bottom" constant="46" id="FmT-97-Anj"/>
+                                    <constraint firstItem="ytL-Xj-JrB" firstAttribute="leading" secondItem="MMG-qE-YDK" secondAttribute="trailing" constant="30" id="J3S-Ns-HWm"/>
+                                    <constraint firstItem="MMG-qE-YDK" firstAttribute="centerX" secondItem="Crf-o6-88V" secondAttribute="centerX" constant="-30" id="Ldz-ZG-i92"/>
+                                    <constraint firstItem="oT4-LX-78L" firstAttribute="leading" secondItem="UeR-7r-ccU" secondAttribute="leading" id="SaN-Qc-SkQ"/>
+                                    <constraint firstItem="tuL-mH-TBk" firstAttribute="trailing" secondItem="nPO-7P-SVW" secondAttribute="trailing" id="TqG-Py-Ntf"/>
+                                    <constraint firstItem="r1P-qD-AkM" firstAttribute="top" secondItem="UeR-7r-ccU" secondAttribute="bottom" constant="50" id="VXd-V0-5ff"/>
+                                    <constraint firstItem="UeR-7r-ccU" firstAttribute="leading" secondItem="nPO-7P-SVW" secondAttribute="leading" id="Ve1-gD-SyH"/>
+                                    <constraint firstItem="r1P-qD-AkM" firstAttribute="leading" secondItem="nPO-7P-SVW" secondAttribute="leading" id="Zyf-8r-0RR"/>
+                                    <constraint firstAttribute="height" constant="234" id="bHT-rD-slg"/>
+                                    <constraint firstItem="r1P-qD-AkM" firstAttribute="trailing" secondItem="nPO-7P-SVW" secondAttribute="trailing" id="cfh-c1-l9I"/>
+                                    <constraint firstItem="nPO-7P-SVW" firstAttribute="top" secondItem="tuL-mH-TBk" secondAttribute="bottom" constant="2" id="eF6-L6-zhg"/>
+                                    <constraint firstItem="nPO-7P-SVW" firstAttribute="leading" secondItem="Crf-o6-88V" secondAttribute="leading" constant="24" id="eKg-0O-0Z9"/>
+                                    <constraint firstItem="g3J-91-9vc" firstAttribute="baseline" secondItem="tuL-mH-TBk" secondAttribute="baseline" id="eM8-sK-06R"/>
+                                    <constraint firstItem="ytL-Xj-JrB" firstAttribute="centerY" secondItem="MMG-qE-YDK" secondAttribute="centerY" id="fPa-gm-W9Q"/>
+                                    <constraint firstItem="UeR-7r-ccU" firstAttribute="top" secondItem="oT4-LX-78L" secondAttribute="bottom" constant="7" id="hju-9a-717"/>
+                                    <constraint firstItem="Ric-JG-sj3" firstAttribute="baseline" secondItem="ytb-48-gOI" secondAttribute="baseline" id="jsQ-XX-1cG"/>
+                                    <constraint firstItem="MMG-qE-YDK" firstAttribute="top" secondItem="r1P-qD-AkM" secondAttribute="bottom" constant="18" id="n7K-52-69u"/>
+                                    <constraint firstItem="g3J-91-9vc" firstAttribute="leading" secondItem="nPO-7P-SVW" secondAttribute="leading" id="nOr-Lm-qxW"/>
+                                    <constraint firstItem="UeR-7r-ccU" firstAttribute="top" secondItem="01E-qU-7kR" secondAttribute="bottom" constant="8" id="vM1-Wh-L3O"/>
+                                    <constraint firstItem="01E-qU-7kR" firstAttribute="trailing" secondItem="UeR-7r-ccU" secondAttribute="trailing" id="zoj-uI-W3g"/>
+                                </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                        <real key="value" value="1"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                        <color key="value" red="0.81568627449999997" green="0.83137254900000002" blue="0.83529411760000005" alpha="1" colorSpace="calibratedRGB"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="5"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" red="0.90588235294117647" green="0.94509803921568625" blue="0.94509803921568625" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="Crf-o6-88V" firstAttribute="leading" secondItem="rk4-GU-soh" secondAttribute="leadingMargin" id="7HA-08-IyG"/>
+                            <constraint firstItem="Crf-o6-88V" firstAttribute="trailing" secondItem="rk4-GU-soh" secondAttribute="trailingMargin" id="doc-Pw-e88"/>
+                            <constraint firstItem="Crf-o6-88V" firstAttribute="top" secondItem="JEr-3a-GWk" secondAttribute="bottom" constant="36" id="gEB-t4-2pc"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="Xwa-32-Jl8"/>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
+                    <connections>
+                        <outlet property="ambientTemperatureLabel" destination="01E-qU-7kR" id="odz-0C-vhs"/>
+                        <outlet property="coolerView" destination="ytL-Xj-JrB" id="fiJ-7C-U8q"/>
+                        <outlet property="leafView" destination="MMG-qE-YDK" id="XkU-yM-55k"/>
+                        <outlet property="targetTemperatureLabel" destination="tuL-mH-TBk" id="MW2-Ab-DPw"/>
+                        <outlet property="temperatureSlider" destination="nPO-7P-SVW" id="nNZ-hS-D6K"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Wza-RL-2hY" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1120.5" y="-410.5"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="KmT-lK-bk4">
+            <objects>
+                <navigationController storyboardIdentifier="ThermostatScreen" automaticallyAdjustsScrollViewInsets="NO" id="vpS-qh-dIG" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="qDS-LI-Cxc">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="4pj-CN-BqP" kind="relationship" relationship="rootViewController" id="Dg1-Er-tAn"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="n8P-ow-wZa" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="143.5" y="-410.5"/>
+        </scene>
     </scenes>
+    <resources>
+        <image name="Fan" width="27" height="28"/>
+        <image name="Leaf" width="28" height="24"/>
+    </resources>
 </document>

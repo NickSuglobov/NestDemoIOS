@@ -9,7 +9,23 @@
 #import "AuthWebViewDelegate.h"
 #import "AppConfiguration.h"
 
+@interface AuthWebViewDelegate()
+
+@property (weak, nonatomic) IBOutlet UIActivityIndicatorView *activity;
+
+@end
+
 @implementation AuthWebViewDelegate
+
+- (void)webViewDidStartLoad:(UIWebView *)webView {
+    self.activity.hidden = NO;
+    [self.activity startAnimating];
+}
+
+- (void)webViewDidFinishLoad:(UIWebView *)webView {
+    [self.activity stopAnimating];
+    self.activity.hidden = YES;
+}
 
 - (BOOL)webView:(UIWebView *)webView shouldStartLoadWithRequest:(NSURLRequest *)request navigationType:(UIWebViewNavigationType)navigationType {
     NSLog(@"Loading URL: %@", request.URL);

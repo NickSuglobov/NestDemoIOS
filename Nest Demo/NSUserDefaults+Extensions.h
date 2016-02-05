@@ -11,5 +11,7 @@
 @interface NSUserDefaults (Extensions)
 
 @property (strong, nonatomic) NSString *authorizationToken;
+@property (strong, nonatomic) NSString *accessToken;
+@property (nonatomic) NSTimeInterval accessTokenExpiration;
 
 @end

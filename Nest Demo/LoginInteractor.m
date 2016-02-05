@@ -10,6 +10,7 @@
 #import "NSUserDefaults+Extensions.h"
 #import "RequestManager.h"
 #import "AppConfiguration.h"
+#import "AppDelegate.h"
 
 @implementation LoginInteractor
 
@@ -21,21 +22,33 @@
     NSString *authCode = queryItem.value;
     [NSUserDefaults standardUserDefaults].authorizationToken = authCode;
     
-    [self loadAccessTokenForAuthorizationCode:authCode];
+    [self loadAccessTokenForAuthorizationCode:authCode success:^{
+        UIViewController *vc = [viewController.storyboard instantiateViewControllerWithIdentifier:@"ThermostatScreen"];
+        AppDelegate *appDelegate = (AppDelegate *)[UIApplication sharedApplication].delegate;
+        appDelegate.window.rootViewController = vc;
+    } failure:^{
+        // show error
+    }];
 }
 
-- (void)loadAccessTokenForAuthorizationCode:(NSString *)authCode {
+- (void)loadAccessTokenForAuthorizationCode:(NSString *)authCode
+                                    success:(void (^)())success
+                                    failure:(void (^)())failure {
     RequestManager *manager = [RequestManager new];
-    
-    __weak typeof(self) weakSelf = self;
     NSDictionary *params = [self accessTokenParamsWithAuthorizationCode:authCode];
     [manager POST:[self accessTokenURL]
            params:params
           success:^(NSDictionary *result, NSURLResponse *response) {
               NSLog(@"Loaded access token: %@", result);
               NSString *token = result[@"access_token"];
+              NSNumber *expiration = result[@"expires_in"];
+              [NSUserDefaults standardUserDefaults].accessToken = token;
+              [NSUserDefaults standardUserDefaults].accessTokenExpiration = [[[NSDate date] dateByAddingTimeInterval:expiration.doubleValue] timeIntervalSince1970];
+              success();
+              
            } failure:^(NSURLResponse *response, NSError *error) {
                NSLog(@"Failed to load access token: %@", error);
+               failure();
            }];
 }
 
