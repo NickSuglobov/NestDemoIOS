@@ -41,7 +41,7 @@
         ThermostatViewController *viewController = segue.destinationViewController;
         long row = [self.tableView indexPathForSelectedRow].row;
         viewController.thermostat = self.dataSource.thermostats[row];
-        [self.thermostatManager.delegates addPointer:(__bridge void * _Nullable)(viewController)];
+        viewController.thermostatManager = self.thermostatManager;
     }
 }
 

@@ -8,10 +8,11 @@
 
 #import <UIKit/UIKit.h>
 
-@class Thermostat;
+@class Thermostat, NestThermostatManager;
 
 @interface ThermostatViewController : UIViewController
 
 @property (strong, nonatomic) Thermostat *thermostat;
+@property (strong, nonatomic) NestThermostatManager *thermostatManager;
 
 @end

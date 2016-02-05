@@ -39,7 +39,7 @@
 - (void)configureCell:(UITableViewCell *)cell atIndexPath:(NSIndexPath *)indexPath {
     Thermostat *thermostat = self.thermostats[indexPath.row];
     cell.textLabel.text = thermostat.nameLong;
-    cell.detailTextLabel.text = [NSString stringWithFormat:@"%ldº", (long)thermostat.ambientTemperatureF];
+    cell.detailTextLabel.text = [NSString stringWithFormat:@"%ldº", (long)thermostat.targetTemperatureF];
 }
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {

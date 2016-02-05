@@ -14,7 +14,6 @@
 
 @interface ThermostatViewController() <NestThermostatManagerDelegate>
 
-@property (nonatomic, strong) NestThermostatManager *thermostatManager;
 @property (weak, nonatomic) IBOutlet UILabel *ambientTemperatureLabel;
 @property (weak, nonatomic) IBOutlet UIProgressView *ambientTemperatureMeter;
 @property (weak, nonatomic) IBOutlet UILabel *targetTemperatureLabel;
@@ -42,22 +41,17 @@ static CGFloat const CurrentTemperatureMax = 140;
     self.coolerView.layer.anchorPoint = CGPointMake(0.44, 0.50);
 }
 
-- (NestThermostatManager *)thermostatManager {
-    if (!_thermostatManager) {
-        _thermostatManager = [NestThermostatManager new];
-        [_thermostatManager.delegates addPointer:(__bridge void * _Nullable)(self)];
-    }
-    
-    return _thermostatManager;
+- (void)setThermostatManager:(NestThermostatManager *)thermostatManager {
+    _thermostatManager = thermostatManager;
+    [_thermostatManager.delegates addPointer:(__bridge void * _Nullable)(self)];
 }
 
 - (void)setThermostat:(Thermostat *)thermostat {
     _thermostat = thermostat;
-    [self.thermostatManager beginSubscriptionForThermostat:thermostat];
     [self updateUIWithThermostat:thermostat];
 }
 
-- (IBAction)saveChanges {
+- (void)saveChanges {
     [self.thermostatManager saveChangesForThermostat:self.thermostat];
 }
 

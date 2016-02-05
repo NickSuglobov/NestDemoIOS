@@ -7,6 +7,7 @@
 //
 
 #import "AppDelegate.h"
+#import "NSUserDefaults+Extensions.h"
 
 @interface AppDelegate ()
 
@@ -16,7 +17,16 @@
 
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
-    // Override point for customization after application launch.
+
+    NSString *token = [NSUserDefaults standardUserDefaults].accessToken;
+    NSDate *expirationDate = [NSDate dateWithTimeIntervalSince1970:[NSUserDefaults standardUserDefaults].accessTokenExpiration];
+    if (token && [expirationDate compare:[NSDate date]] == NSOrderedDescending) {
+        NSLog(@"token date: %@, current date: %@", expirationDate, [NSDate date]);
+        UIStoryboard *storyboard = [UIStoryboard storyboardWithName:@"Main" bundle:nil];
+        UIViewController *vc = [storyboard instantiateViewControllerWithIdentifier:@"ThermostatScreen"];
+        self.window.rootViewController = vc;
+    }
+    
     return YES;
 }
 
