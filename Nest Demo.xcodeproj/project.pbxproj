@@ -12,9 +12,11 @@
 		9EB583191C64BF0C00F6D79A /* TintImageView.m in Sources */ = {isa = PBXBuildFile; fileRef = 9EB583181C64BF0C00F6D79A /* TintImageView.m */; };
 		9EB5831D1C64D07F00F6D79A /* Rotor.m in Sources */ = {isa = PBXBuildFile; fileRef = 9EB5831C1C64D07F00F6D79A /* Rotor.m */; };
 		9EB583201C64D4DB00F6D79A /* UIColor+Extensions.m in Sources */ = {isa = PBXBuildFile; fileRef = 9EB5831F1C64D4DB00F6D79A /* UIColor+Extensions.m */; };
+		9EB583231C6509DE00F6D79A /* StructuresViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9EB583221C6509DE00F6D79A /* StructuresViewController.m */; };
+		9EB583261C650AAB00F6D79A /* StructuresListDataSource.m in Sources */ = {isa = PBXBuildFile; fileRef = 9EB583251C650AAB00F6D79A /* StructuresListDataSource.m */; };
+		9EB583291C650B3900F6D79A /* Structure.m in Sources */ = {isa = PBXBuildFile; fileRef = 9EB583281C650B3900F6D79A /* Structure.m */; };
 		9EBC7C9C1C610F2B00FF5616 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 9EBC7C9B1C610F2B00FF5616 /* main.m */; };
 		9EBC7C9F1C610F2B00FF5616 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 9EBC7C9E1C610F2B00FF5616 /* AppDelegate.m */; };
-		9EBC7CA21C610F2B00FF5616 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9EBC7CA11C610F2B00FF5616 /* ViewController.m */; };
 		9EBC7CA51C610F2B00FF5616 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9EBC7CA31C610F2B00FF5616 /* Main.storyboard */; };
 		9EBC7CA71C610F2B00FF5616 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9EBC7CA61C610F2B00FF5616 /* Assets.xcassets */; };
 		9EBC7CAA1C610F2B00FF5616 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9EBC7CA81C610F2B00FF5616 /* LaunchScreen.storyboard */; };
@@ -47,12 +49,16 @@
 		9EB5831C1C64D07F00F6D79A /* Rotor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Rotor.m; sourceTree = "<group>"; };
 		9EB5831E1C64D4DB00F6D79A /* UIColor+Extensions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIColor+Extensions.h"; sourceTree = "<group>"; };
 		9EB5831F1C64D4DB00F6D79A /* UIColor+Extensions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIColor+Extensions.m"; sourceTree = "<group>"; };
+		9EB583211C6509DE00F6D79A /* StructuresViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StructuresViewController.h; sourceTree = "<group>"; };
+		9EB583221C6509DE00F6D79A /* StructuresViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StructuresViewController.m; sourceTree = "<group>"; };
+		9EB583241C650AAB00F6D79A /* StructuresListDataSource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StructuresListDataSource.h; sourceTree = "<group>"; };
+		9EB583251C650AAB00F6D79A /* StructuresListDataSource.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StructuresListDataSource.m; sourceTree = "<group>"; };
+		9EB583271C650B3900F6D79A /* Structure.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Structure.h; sourceTree = "<group>"; };
+		9EB583281C650B3900F6D79A /* Structure.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Structure.m; sourceTree = "<group>"; };
 		9EBC7C971C610F2B00FF5616 /* Nest Demo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Nest Demo.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		9EBC7C9B1C610F2B00FF5616 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		9EBC7C9D1C610F2B00FF5616 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		9EBC7C9E1C610F2B00FF5616 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		9EBC7CA01C610F2B00FF5616 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		9EBC7CA11C610F2B00FF5616 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		9EBC7CA41C610F2B00FF5616 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		9EBC7CA61C610F2B00FF5616 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		9EBC7CA91C610F2B00FF5616 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -158,8 +164,6 @@
 				9EBC7CB11C622CC800FF5616 /* Screens */,
 				9EBC7C9D1C610F2B00FF5616 /* AppDelegate.h */,
 				9EBC7C9E1C610F2B00FF5616 /* AppDelegate.m */,
-				9EBC7CA01C610F2B00FF5616 /* ViewController.h */,
-				9EBC7CA11C610F2B00FF5616 /* ViewController.m */,
 				9EBC7CA31C610F2B00FF5616 /* Main.storyboard */,
 				9EBC7CA61C610F2B00FF5616 /* Assets.xcassets */,
 				9EBC7CA81C610F2B00FF5616 /* LaunchScreen.storyboard */,
@@ -190,6 +194,10 @@
 				9EBC7EE61C63826600866361 /* ThermostatListController.m */,
 				9EBC7EE81C63831500866361 /* ThermostatListDataSource.h */,
 				9EBC7EE91C63831500866361 /* ThermostatListDataSource.m */,
+				9EB583241C650AAB00F6D79A /* StructuresListDataSource.h */,
+				9EB583251C650AAB00F6D79A /* StructuresListDataSource.m */,
+				9EB583211C6509DE00F6D79A /* StructuresViewController.h */,
+				9EB583221C6509DE00F6D79A /* StructuresViewController.m */,
 			);
 			name = Screens;
 			sourceTree = "<group>";
@@ -229,6 +237,8 @@
 				9EBC7EDB1C6366BB00866361 /* NestStructureManager.m */,
 				9EBC7EDF1C63681500866361 /* Thermostat.h */,
 				9EBC7EE01C63681500866361 /* Thermostat.m */,
+				9EB583271C650B3900F6D79A /* Structure.h */,
+				9EB583281C650B3900F6D79A /* Structure.m */,
 			);
 			name = "Nest Api";
 			sourceTree = "<group>";
@@ -368,12 +378,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				9EBC7EDC1C6366BB00866361 /* FirebaseManager.m in Sources */,
-				9EBC7CA21C610F2B00FF5616 /* ViewController.m in Sources */,
 				9EC629531C62458500827A0D /* NSUserDefaults+Extensions.m in Sources */,
 				9EB5831D1C64D07F00F6D79A /* Rotor.m in Sources */,
 				9EBC7C9F1C610F2B00FF5616 /* AppDelegate.m in Sources */,
+				9EB583231C6509DE00F6D79A /* StructuresViewController.m in Sources */,
 				9EBC7CBE1C622E6B00FF5616 /* AppConstants.m in Sources */,
 				9EBC7EDD1C6366BB00866361 /* NestThermostatManager.m in Sources */,
+				9EB583261C650AAB00F6D79A /* StructuresListDataSource.m in Sources */,
 				9EBC7C9C1C610F2B00FF5616 /* main.m in Sources */,
 				9EBC7EDE1C6366BB00866361 /* NestStructureManager.m in Sources */,
 				9EBC7CB41C622CD900FF5616 /* WebViewController.m in Sources */,
@@ -381,6 +392,7 @@
 				9EC629561C62516800827A0D /* RequestManager.m in Sources */,
 				9EC6294C1C62439800827A0D /* LoginInteractor.m in Sources */,
 				9EBC7CC21C62321900FF5616 /* AuthWebViewDelegate.m in Sources */,
+				9EB583291C650B3900F6D79A /* Structure.m in Sources */,
 				9EBC7CB71C622DE400FF5616 /* LoginViewController.m in Sources */,
 				9EBC7EE11C63681500866361 /* Thermostat.m in Sources */,
 				9EBC7EEA1C63831500866361 /* ThermostatListDataSource.m in Sources */,

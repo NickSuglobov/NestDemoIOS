@@ -12,11 +12,10 @@
 #import "NestStructureManager.h"
 #import "NestThermostatManager.h"
 
-@interface ThermostatListController() <NestStructureManagerDelegate, NestThermostatManagerDelegate>
+@interface ThermostatListController() <NestThermostatManagerDelegate>
 
 @property (strong, nonatomic) IBOutlet ThermostatListDataSource *dataSource;
 @property (strong, nonatomic) NestStructureManager *structureManager;
-@property (nonatomic, strong) NestThermostatManager *thermostatManager;
 @property (weak, nonatomic) IBOutlet UIActivityIndicatorView *activity;
 @property (weak, nonatomic) IBOutlet UITableView *tableView;
 
@@ -27,13 +26,22 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    self.structureManager = [[NestStructureManager alloc] init];
-    self.structureManager.delegate = self;
-    [self.structureManager initialize];
     [self.activity startAnimating];
+}
+
+- (void)setStructure:(Structure *)structure {
+    _structure = structure;
     
-    self.thermostatManager = [NestThermostatManager new];
+    self.title = structure.name;
+}
+
+- (void)setThermostatManager:(NestThermostatManager *)thermostatManager {
+    _thermostatManager = thermostatManager;
     [self.thermostatManager.delegates addPointer:(__bridge void * _Nullable)(self)];
+    for (Thermostat *t in self.structure.thermostats) {
+        [self.thermostatManager beginSubscriptionForThermostat:t];
+    }
+    self.dataSource.thermostats = self.structure.thermostats;
 }
 
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
@@ -46,22 +54,11 @@
 }
 
 
-#pragma mark - NestStructureManagerDelegate
-- (void)nestStructureManagerDelegate:(NestStructureManager *)manager didLoadThermostats:(NSArray<Thermostat *> *)thermostats name:(NSString *)name {
-    self.title = name;
-    self.dataSource.thermostats = thermostats;
-    self.activity.hidden = YES;
-    [self.activity stopAnimating];
-    
-    
-    for (Thermostat *t in thermostats) {
-        [self.thermostatManager beginSubscriptionForThermostat:t];
-    }
-}
-
 #pragma mark - NestThermostatManagerDelegate
 - (void)thermostatValuesChanged:(Thermostat *)thermostat {
     [self.tableView reloadData];
+    [self.activity stopAnimating];
+    self.activity.hidden = YES;
 }
 
 @end

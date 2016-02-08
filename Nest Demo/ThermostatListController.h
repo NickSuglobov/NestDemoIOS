@@ -7,7 +7,13 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "Structure.h"
+
+@class Structure, NestThermostatManager;
 
 @interface ThermostatListController : UIViewController
+
+@property (strong, nonatomic) Structure *structure;
+@property (strong, nonatomic) NestThermostatManager *thermostatManager;
 
 @end

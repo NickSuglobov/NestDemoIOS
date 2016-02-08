@@ -17,6 +17,7 @@
 #import "NestStructureManager.h"
 #import "Thermostat.h"
 #import "FirebaseManager.h"
+#import "Structure.h"
 
 @implementation NestStructureManager
 
@@ -27,7 +28,7 @@
 - (void)initialize
 {
     [[FirebaseManager sharedManager] addSubscriptionToURL:@"structures/" withBlock:^(FDataSnapshot *snapshot) {
-        [self parseStructure:snapshot.value];
+        [self parseStructures:snapshot.value];
     }];
 }
 
@@ -35,10 +36,23 @@
  * Parse the structure and send it back to the delegate
  * @param The structure you want to parse.
  */
-- (void)parseStructure:(NSDictionary *)structure
+- (void)parseStructures:(NSDictionary *)structuresData
 {
-    NSArray *thermostats = [self thermostatsForStructure:structure];
-    [self.delegate nestStructureManagerDelegate:self didLoadThermostats:thermostats name:[self nameForStructure:structure]];
+    NSMutableArray *structures = [NSMutableArray new];
+    for (NSString *key in structuresData.allKeys) {
+        [structures addObject:[self parseStructure:structuresData[key]]];
+    }
+    
+    [self.delegate nestStructureManagerDelegate:self didLoadStructures:structures];
+}
+
+- (Structure *)parseStructure:(NSDictionary *)data {
+    Structure *structure = [Structure new];
+    structure.name = data[@"name"];
+    structure.status = data[@"away"];
+    structure.structureId = data[@"structure_id"];
+    structure.thermostats = [self thermostatsForStructure:data];
+    return structure;
 }
 
 - (NSString *)nameForStructure:(NSDictionary *)structure {
@@ -51,10 +65,9 @@
  * @param The structure you want to create thermostats for
  * @return The list of thermostats in the structure in an NSArray
  */
-- (NSArray *)thermostatsForStructure:(NSDictionary *)structure
+- (NSArray *)thermostatsForStructure:(NSDictionary *)data
 {
-    NSString *structureId = [[structure allKeys] objectAtIndex:0];
-    NSArray *thermostatIds = [[structure objectForKey:structureId] objectForKey:@"thermostats"];
+    NSArray *thermostatIds = [data objectForKey:@"thermostats"];
     NSMutableArray *returnArray = [[NSMutableArray alloc] init];
     
     if (!thermostatIds || [thermostatIds count] == 0) {

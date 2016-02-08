@@ -15,12 +15,12 @@
  */
 
 @import Foundation;
-#import "Thermostat.h"
 
-@class NestStructureManager;
+@class NestStructureManager, Structure;
+
 @protocol NestStructureManagerDelegate
 
-- (void)nestStructureManagerDelegate:(NestStructureManager *)manager didLoadThermostats:(NSArray<Thermostat *> *)thermostats name:(NSString *)name;
+- (void)nestStructureManagerDelegate:(NestStructureManager *)manager didLoadStructures:(NSArray<Structure *> *)structures;
 
 @end
 
